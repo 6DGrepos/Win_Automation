@@ -1,0 +1,11 @@
+---
+- name: Kill a process on Windows
+  hosts: windows
+  tasks:
+    - name: Kill a process by name
+      win_shell: |
+        taskkill /F /IM <process_name>.exe
+      register: result
+    - name: Check the result of the kill command
+      debug:
+        var: result
