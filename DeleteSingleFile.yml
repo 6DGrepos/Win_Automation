@@ -1,6 +1,6 @@
 ---
 - name: Delete a specific file on Windows Server
-  hosts: windows
+  hosts: 10.1.44.125
   gather_facts: no
   tasks:
     - name: Delete file C:\Temp\delete.txt
